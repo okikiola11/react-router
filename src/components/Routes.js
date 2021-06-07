@@ -1,27 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import App from './App';
+import Nav from './Nav';
 import Profile from './Profile';
 import Settings from './Settings';
 
 const Routes = () => {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/profile'>Profile</Link>
-            </li>
-            <li>
-              <Link to='/settings'>Settings</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <Nav />
 
       <Switch>
         <Route exact path='/profile'>
