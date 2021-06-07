@@ -3,7 +3,8 @@ import React from 'react'
 const Settings = () => {
   return (
     <div>
-      <h1>New Settings and Protocol</h1>
+      <h1>Banners</h1>
+
     </div>
   )
 }
