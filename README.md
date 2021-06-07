@@ -16,3 +16,6 @@ In the project directory, you can run:
 - remove unnnecessary boiletplate files and codes
 - change codes to use functional components
 - install the react route using npm i react-router-dom
+- Has two routes
+-- http://localhost:3000
+-- http://localhost:3000/profile
