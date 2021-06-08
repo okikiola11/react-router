@@ -1,18 +1,29 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import App from './App';
+import Nav from './Nav';
 import Profile from './Profile';
-import Settings from './Settings';
+import Banner from './Banner';
+import BannerDetail from './BannerDetail';
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <Router>
+      <Nav />
+
       <Switch>
-        <Route exact path='/' component={App} />
-        <Route exact path='/profile' component={Profile} />
-        <Route exact path='/settings' component={Settings} />
+        <Route exact path='/profile'>
+          <Profile />
+        </Route>
+        <Route exact path='/banner'>
+          <Banner />
+        </Route>
+        <Route exact path='/'>
+          <App />
+        </Route>
+        <Route exact path='/banner/:id' component={BannerDetail} />
       </Switch>
-    </BrowserRouter>
+    </Router>
   )
 }
 
