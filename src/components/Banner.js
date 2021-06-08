@@ -9,7 +9,7 @@ const Banner = () => {
   const [items, setItems] = useState([]);
 
   const fetchItems = async () => {
-    const data = await fetch(`https://fortnite-api.com/v1/banners`);
+    const data = await fetch(`https://fortnite-api.com/v1/playlists`);
     const response = await data;
     const items = await response.json()
     
@@ -22,7 +22,7 @@ const Banner = () => {
       <h1>Banners Page</h1>
       {items.map(item => (
         <h1 key={item.id}>
-          <Link to={`/banner/${item.id}`}>{item.devName}</Link>
+          <Link to={`/banner/${item.id}`}>{item.name}</Link>
         </h1>
       ))}
     </div>
