@@ -19,7 +19,7 @@ const Banner = () => {
 
   return (
     <div>
-      <h1>Banners Page</h1>
+      <h1>All Banners</h1>
       {items.map(item => (
         <h1 key={item.id}>
           <Link to={`/banner/${item.id}`}>{item.name}</Link>
