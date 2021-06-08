@@ -20,7 +20,8 @@ const BannerDetail = ({ match }) => {
 
   return (
     <div>
-      <h1>{item.name}: {item.description}</h1>
+      <h1>{item.name}:</h1>
+      <h4>{item.description}</h4>
       <img className="imgStyle" src={item.images.missionIcon} alt='' />
     </div>
     
